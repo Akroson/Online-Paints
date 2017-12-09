@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/public/css/style.css">
+	<link rel="stylesheet" href="/public/css/normalize.css">
+	<style>
+		#canvas-wrapper {
+			position: relative;
+			display: inline-block;
+		}
+		#cnv {
+			background-color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="modal">
+		<div id="modal_block">
+			<p class="modal_massage">User <span id="name-user"></span> wants to join in room</p>
+			<div>
+				<button class="ok">Ok</button>
+				<button class="cancel">Cancel</button>
+			</div>
+		</div>
+	</div>
+	<header class="header">
+		<a href="#">escape room</a>
+	</header>
+	<section id="wrapper">
+			<div id="canvas-wrapper">
+				<canvas id="cnv" width="1200" height="750"></canvas>
+				<canvas id="shadow-cnv" width="1200" height="750"></canvas>
+			</div>
+			<div class="controler">
+				<div class="controler__range">
+					<canvas id="widthLine" width="100" height="100"></canvas>
+					<input id="rangeWidth" type="range" min="1" max="50" value="10">
+				</div>
+				<div class="controler__type-paints">
+					<ul class="list-type-pants">
+						<li class="item-list">
+							<input checked name="rb_button" type="radio" class="radio__paints" id="line">
+							<label for="line">line</label>
+						</li>
+						<li class="item-list">
+							<input name="rb_button" type="radio" class="radio__paints" id="circle">
+							<label for="circle">circle</label>
+						</li>
+						<li class="item-list">
+							<input name="rb_button" type="radio" class="radio__paints" id="square">
+							<label for="square">square</label>
+						</li>
+						<li class="item-list">
+							<input name="rb_button" type="radio" class="radio__paints" id="eraser">
+							<label for="eraser">eraser</label>
+						</li>
+					</ul>
+					<div class="controler__fill">
+						<input checked type="checkbox" id="fill__checkbox">
+						<span>Fill</span>
+					</div>
+				</div>
+				<div class="controler__color">
+					<p>Change color: </p>
+					<input id="color" type="color" value="#000000">
+				</div>
+			</div>
+	</section>
+	<script src="/public/js/common.js"></script>
+</body>
+</html>
